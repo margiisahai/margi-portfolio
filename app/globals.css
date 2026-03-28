@@ -12,8 +12,11 @@
   --color-surface-dark: #C8C0B4;
 }
 
-* {
+*, *::before, *::after,
+a, button, input, textarea, select, label,
+[role="button"], [tabindex] {
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 html {
