@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import { Inter, DM_Sans, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
 
@@ -15,6 +15,12 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "Margi Sahai — Product Designer",
   description:
@@ -27,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${inter.variable} ${dmSans.variable} ${bebasNeue.variable}`}>
       <body className="antialiased" style={{ cursor: "none" }}>
         <CustomCursor />
         {children}

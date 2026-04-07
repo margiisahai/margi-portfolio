@@ -3,14 +3,22 @@
 @theme inline {
   --font-syne: var(--font-syne);
   --font-dm-sans: var(--font-dm-sans);
+  --font-bebas: var(--font-bebas);
 
   --color-cream: #F4F0EB;
   --color-ink: #1C1917;
   --color-muted: #6B6560;
   --color-terracotta: #D4522A;
+  --color-brand-red: #B82E29;
   --color-surface: #EDE8E1;
   --color-surface-dark: #C8C0B4;
 }
+
+@keyframes circleExpand {
+  from { clip-path: circle(10px at 50% 50%); }
+  to   { clip-path: circle(150vmax at 50% 50%); }
+}
+
 
 *, *::before, *::after,
 a, button, input, textarea, select, label,
@@ -29,4 +37,25 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Decorative H1 — Bebas Neue display style ── */
+.decorative-h1 {
+  font-family: var(--font-bebas), sans-serif;
+  font-weight: 400;
+  font-size: 300px;
+  line-height: 360px;
+  letter-spacing: -12px;
+  text-transform: uppercase;
+}
+
+/* ── Section H1 — Bebas Neue section heading ── */
+.section-h1 {
+  font-family: var(--font-bebas), sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #1C1917;
 }
